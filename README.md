@@ -121,3 +121,25 @@ After a test run, open [`reports/report.html`](reports/report.html) in a browser
 - **Browser executable missing:** run `playwright install` after activating the virtual environment.
 - **Tests cannot reach the page:** verify internet access and that `https://www.qapractice.com` is available.
 - **PowerShell activation fails:** use the temporary execution-policy command shown in the installation section, or activate the environment through Command Prompt with `.venv\\Scripts\\activate.bat`.
+
+## Test Scenarios Covered
+
+The automation framework covers the following flight booking scenarios:
+
+- One-way flight search
+- Round-trip flight search
+- Flight search with passenger details
+- Passenger count validation
+- Travel class selection
+- Flight selection
+- Payment details validation
+- Required field validation
+- Invalid input validation
+- Booking flow verification
+
+## Test Execution
+
+Run all tests using:
+
+```bash
+pytest
