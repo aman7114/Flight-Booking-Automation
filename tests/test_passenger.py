@@ -19,6 +19,8 @@ def test_invalid_passenger_email(page):
     search_page.select_departure_date(DEPARTURE_DATE)
     search_page.set_passengers(DEFAULT_PASSENGERS)
     search_page.select_travel_class(TRAVEL_CLASS)
+    search_page.select_one_way()
+    search_page.search_flights()
 
     # Step 2 - Select flight
     selection_page = FlightSelectionPage(page)
