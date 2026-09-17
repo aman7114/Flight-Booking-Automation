@@ -1,5 +1,6 @@
 from pages.flight_search_page import FlightSearchPage
 from pages.flight_selection_page import FlightSelectionPage
+from constants.flight_constants import DEPARTURE_DATE, TRAVEL_CLASS, FROM_CITY, TO_CITY, DEFAULT_PASSENGERS
 
 
 def test_sort_flights_by_price_low_to_high(page):
@@ -10,11 +11,11 @@ def test_sort_flights_by_price_low_to_high(page):
     # Step 1 - Search
     search_page = FlightSearchPage(page)
 
-    search_page.select_from_city("New York")
-    search_page.select_to_city("London")
-    search_page.select_departure_date("2026-09-18")
-    search_page.set_passengers(1)
-    search_page.select_travel_class("Economy")
+    search_page.select_from_city(FROM_CITY)
+    search_page.select_to_city(TO_CITY)
+    search_page.select_departure_date(DEPARTURE_DATE)
+    search_page.set_passengers(DEFAULT_PASSENGERS)
+    search_page.select_travel_class(TRAVEL_CLASS)
     search_page.select_one_way()
     search_page.search_flights()
 
@@ -38,11 +39,11 @@ def test_filter_nonstop_flights(page):
     # Step 1 - Search
     search_page = FlightSearchPage(page)
 
-    search_page.select_from_city("New York")
-    search_page.select_to_city("London")
-    search_page.select_departure_date("2026-09-18")
-    search_page.set_passengers(1)
-    search_page.select_travel_class("Economy")
+    search_page.select_from_city(FROM_CITY)
+    search_page.select_to_city(TO_CITY)
+    search_page.select_departure_date(DEPARTURE_DATE)
+    search_page.set_passengers(DEFAULT_PASSENGERS)
+    search_page.select_travel_class(TRAVEL_CLASS)
     search_page.select_one_way()
     search_page.search_flights()
 
@@ -70,11 +71,11 @@ def test_continue_button_disabled_until_flight_selected(page):
     # Step 1 - Search
     search_page = FlightSearchPage(page)
 
-    search_page.select_from_city("New York")
-    search_page.select_to_city("London")
-    search_page.select_departure_date("2026-09-18")
-    search_page.set_passengers(1)
-    search_page.select_travel_class("Economy")
+    search_page.select_from_city(FROM_CITY)
+    search_page.select_to_city(TO_CITY)
+    search_page.select_departure_date(DEPARTURE_DATE)
+    search_page.set_passengers(DEFAULT_PASSENGERS)
+    search_page.select_travel_class(TRAVEL_CLASS)
     search_page.select_one_way()
     search_page.search_flights()
 
