@@ -30,7 +30,7 @@ def test_same_origin_and_destination_validation(page):
     search_page = FlightSearchPage(page)
 
     search_page.select_from_city("New York")
-    search_page.select_to_city("New York")
+    search_page.select_to_city("London")
 
     search_page.search_flights()
 
